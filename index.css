@@ -1,0 +1,115 @@
+:root {
+  --main-color: white;
+  --text-color: black;
+  --text-color-focus: #3f4371;
+  --info-font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--info-font-family);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+main {
+  width: 80vw;
+  justify-content: center;
+}
+
+/* Navbar */
+
+.logo-head {
+  border-radius: 0.2em;
+  background-color: var(--text-color-focus);
+  color: var(--main-color);
+  padding: 0.2em 0.4em;
+}
+
+.logo-body {
+  margin-left: 0.2em;
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: var(--bg-color);
+  font-size: 20px;
+}
+/* Toggle button */
+
+.navbar_toggle {
+  margin-left: 5%;
+  font-size: 30px;
+  color: #ffffff;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  display: none;
+}
+
+.logo_header {
+  color: var(--text-color);
+  font-family: var(--decorative-font);
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: baseline;
+  margin-left: 10vw;
+}
+
+.navbar-logo {
+  background-image: url(./img/yoga-logo.webp);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5em;
+}
+
+.main_nav {
+  display: flex;
+  width: 40%;
+  float: right;
+  margin-right: 10vw;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.main_nav li {
+  display: inline-block;
+  color: var(--text-color);
+}
+.main_nav li a {
+  font-size: 24px;
+  padding: 0.2em 0.5em;
+  color: var(--text-color);
+  font-family: var(--decorative-font);
+}
+.main_nav li a:hover {
+  font-weight: bold;
+  color: var(--text-color-focus);
+  border-radius: 0.3em;
+  border: 3px solid var(--text-color-focus);
+}
