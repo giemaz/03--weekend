@@ -3,6 +3,7 @@
   --text-color: black;
   --text-color-focus: #3f4371;
   --info-font-family: Arial, Helvetica, sans-serif;
+  --decorative-font: Monospace, sans-serif;
 }
 
 * {
@@ -24,13 +25,89 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 4.5em;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: var(--text-color-focus);
+}
+
+h1 span {
+  font-family: var(--decorative-font);
+  font-size: 0.8em;
+}
+
 h2 {
   text-transform: uppercase;
+}
+
+p {
+  padding: 2em 0;
 }
 
 main {
   width: 80vw;
   justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info {
+  width: 30%;
+  margin-right: 5vw;
+  background: transparent;
+  z-index: 1;
+}
+
+.picture {
+  transform: translate(-5vw, 0);
+  width: 70%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  width: 60%;
+  margin: 3vh 0;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  color: var(--main-color);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  background-color: var(--text-color-focus);
+  line-height: 0px;
+  text-align: center;
+  font-family: var(--decorative-font);
+}
+
+.social {
+  margin-top: 5vh;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2vw;
+  width: 2vw;
+  background-color: var(--text-color-focus);
+  border-radius: 50%;
+}
+
+.fa-brands {
+  color: var(--main-color);
+  z-index: 1;
 }
 
 /* Navbar */
@@ -60,7 +137,7 @@ main {
 .navbar_toggle {
   margin-left: 5%;
   font-size: 30px;
-  color: #ffffff;
+  color: var(--main-color);
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
@@ -75,7 +152,6 @@ main {
   display: flex;
   font-weight: 400;
   align-items: baseline;
-  margin-left: 10vw;
 }
 
 .navbar-logo {
@@ -92,7 +168,7 @@ main {
   display: flex;
   width: 40%;
   float: right;
-  margin-right: 10vw;
+  margin-right: 5vw;
   justify-content: space-between;
   list-style: none;
 }
