@@ -3,6 +3,7 @@
   --text-color: black;
   --text-color-focus: #3f4371;
   --info-font-family: Arial, Helvetica, sans-serif;
+  --decorative-font: Monospace, sans-serif;
 }
 
 * {
@@ -24,13 +25,91 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 4.5em;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: var(--text-color-focus);
+}
+
+h1 span {
+  font-family: var(--decorative-font);
+  font-size: 0.8em;
+}
+
 h2 {
   text-transform: uppercase;
+}
+
+p {
+  padding: 2em 0;
 }
 
 main {
   width: 80vw;
   justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10vh;
+}
+
+.info {
+  width: 30%;
+  margin-right: 5vw;
+  background: transparent;
+  z-index: 1;
+}
+
+.picture {
+  transform: translate(-5vw, 0);
+  width: 70%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  width: 60%;
+  margin: 3vh 0;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  color: var(--main-color);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  background-color: var(--text-color-focus);
+  line-height: 0px;
+  text-align: center;
+  font-family: var(--decorative-font);
+}
+
+.social {
+  margin-top: 5vh;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-bg {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2vw;
+  width: 2vw;
+  background-color: var(--text-color-focus);
+  border-radius: 50%;
+}
+
+.fa-brands {
+  color: var(--main-color);
+  z-index: 1;
 }
 
 /* Navbar */
@@ -43,7 +122,8 @@ main {
 }
 
 .logo-body {
-  margin-left: 0.2em;
+  font-weight: 800;
+  margin-left: 0.1em;
 }
 
 .navbar {
@@ -60,7 +140,7 @@ main {
 .navbar_toggle {
   margin-left: 5%;
   font-size: 30px;
-  color: #ffffff;
+  color: var(--main-color);
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
@@ -75,11 +155,9 @@ main {
   display: flex;
   font-weight: 400;
   align-items: baseline;
-  margin-left: 10vw;
 }
 
 .navbar-logo {
-  background-image: url(./img/yoga-logo.webp);
   background-position: center;
   background-size: cover;
   display: inline-block;
@@ -92,7 +170,7 @@ main {
   display: flex;
   width: 40%;
   float: right;
-  margin-right: 10vw;
+  margin-right: 5vw;
   justify-content: space-between;
   list-style: none;
 }
@@ -112,4 +190,124 @@ main {
   color: var(--text-color-focus);
   border-radius: 0.3em;
   border: 3px solid var(--text-color-focus);
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    width: 90vw;
+    justify-content: center;
+  }
+  .content {
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    width: 50%;
+  }
+
+  .picture {
+    width: 50%;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .social {
+    width: 100%;
+  }
+  .icon-bg {
+    height: 4vw;
+    width: 4vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .content {
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+  .info {
+    margin-top: 10vh;
+    width: 100%;
+    margin-right: 5vw;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  /* img {
+    display: none;
+  } */
+
+  .icon-bg {
+    height: 5vw;
+    width: 5vw;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: var(--bg-color);
+    font-size: 20px;
+  }
+
+  .main_nav {
+    display: none;
+  }
+
+  .show_nav {
+    padding-top: 2%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main_nav li {
+    width: 100vw;
+    height: 50px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+    background: var(--main-color);
+    z-index: 10;
+  }
+  .navbar_toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+    color: var(--text-color);
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    display: block;
+  }
+
+  .fa-bars {
+    display: inline-block;
+  }
+  .logo_header {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 2%;
+  }
 }
